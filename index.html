@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="shortcut icon" href="assets/Ah.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>CodTech Quiz</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="navbar">
+            <h1>Ah <img src="assets/quiz logo.png" alt="logo"><span>.</span></h1>
+            <div class="nav-right">
+                <button>Read More</button>
+                <i class="fa-solid fa-headset"></i>
+            </div>
+        </div>
+        <div class="header">
+            <div class="header-left">
+                <img src="assets/startquiz.png" alt="test">
+            </div>
+            <div class="header-right">
+                <form id="user-register">
+                    <h2>Register</h2>
+                    <div class="input-field">
+                        <label>First name :</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Last name :</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Email :</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" required>
+                        <label>I completely agree with <a href="">T&C</a></label>
+                    </div>
+                    <input type="submit" value="Start Quiz">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="hidden" id="quiz-container">
+        <div class="quiz-sidebar">
+            <h3>Frontend Development</h3>
+            <div id="question-numbers"></div>
+        </div>
+        <div class="quiz-content">
+            <h2>Question</h2>
+            <div class="question-container">
+                <div id="timer" class="timer"></div>
+                <div class="quiz-box">
+                    <h4 id="question-title"></h4>
+                    <div class="options-container" id="options-container">
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-actions">
+                <button id="prev-btn" disabled><i class="fa-solid fa-arrow-left"></i></button>
+                <button id="submit-btn" class="hidden">Submit</button>
+                <button id="next-btn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="result-container hidden">
+        <h2>Quiz Completed!</h2>
+        <p id="user-name"></p>
+        <p id="final-score"></p>
+        <img src="assets/result-bg.png" alt="test compleated">
+        <span>Kindly show this response to your invigilator!</span>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
